@@ -1,0 +1,45 @@
+# Ignore node_modules directory
+node_modules/
+
+# Ignore build output
+build/
+
+# Ignore IDE and editor files
+.vscode/
+.idea/
+*.iml
+
+# Ignore logs and generated files
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Ignore dependency lock files
+package-lock.json
+yarn.lock
+
+# Ignore environment-specific files
+.env
+.env.local
+.env.*.local
+
+# Ignore macOS file system metadata
+.DS_Store
+
+# Ignore editor backup files
+*~
+*.swp
+*.swo
+
+# Ignore testing and coverage files
+coverage/
+
+# Ignore compiled output
+dist/
+
+# Ignore cache and temporary files
+.cache/
+.tmp/
+.temp/
