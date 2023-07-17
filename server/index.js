@@ -19,8 +19,6 @@ import Post from './models/Posts.js';
 import { users, posts } from "./data/index.js";
 
 // CONFIGURATIONS
-
-/* CONFIGURATIONS */
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 dotenv.config();
@@ -46,12 +44,12 @@ const storage = multer.diskStorage({
 const upload = multer({storage});
 
 // ROUTES WITH FILES
-app.post("auth/register", upload.single("picture"), register);
+app.post("/auth/register", upload.single("picture"), register);
 app.post("/posts", verifyToken, upload.single("picture"), createPost);
 // ROUTES
 app.use("/auth", authRoutes);
 app.use("/users", userRoutes);
-app.use("/posts/", postRoutes);
+app.use("/posts", postRoutes);
 
 // MONGOOSE SETUP
 
